@@ -108,12 +108,12 @@ h4 {
 .box {
     width: 40px; 
     height: 40px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Adicionando transição */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
 }
 
 .box :hover {
-    transform: scale(1.1); /* Aumenta o tamanho da caixa */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); /* Sombra suave ao passar o mouse */
+    transform: scale(1.1); 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); 
 }
 
 svg {
