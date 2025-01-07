@@ -86,7 +86,7 @@ h4 {
     margin: 0;
     text-align: left;
     font-family: "Quicksand", serif;
-    font-size: 1.2rem; /* Diminuído para responsividade */
+    font-size: 1.2rem; 
     font-weight: normal;
     opacity: 0;
     animation: fadeIn 2s 1s forwards;
