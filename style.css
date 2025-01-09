@@ -89,13 +89,13 @@ nav a:hover {
   background-size: cover;
   background-position: center;
   border-radius: 50%; 
-  border: 2px solid #802424; 
-  box-shadow: 0 0 40px 20px rgba(110, 35, 35, 0.8); 
+  border: 2px solid #ffffff; 
+  box-shadow: 0 0 40px 20px rgba(235, 235, 235, 0.8); 
   animation: imageEntry 1s ease-out forwards;
 }
 
 #page1 h1 {
-  color: #c22323;
+  color: #fff;
   margin: 20px 0;
   text-align: left;
   font-family: "Bebas Neue", serif;
@@ -197,7 +197,7 @@ svg {
 }
 
 h4 {
-  color: #c22323;
+  color: #fff;
   font-family: 'Montserrat', serif;
   font-size: 1.5rem;
   font-weight: bold;
