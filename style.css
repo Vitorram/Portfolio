@@ -12,8 +12,10 @@ body {
   justify-content: center;
   align-items: center;
   z-index: 2; 
-  gap: 60px
+  gap: 60px;
+  flex-wrap: wrap;
 }
+
 .body2 {
   position: relative; 
   height: 100vh; 
@@ -32,37 +34,41 @@ body {
   background-size: cover; 
   z-index: -1;
 }
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box; 
 }
-
-
-  header {
-    position: fixed; 
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 60px;
-    border-end-end-radius: 20px;
-    border-bottom-left-radius: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 15px 0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-    z-index: 1000;
-  }
-
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  border-end-end-radius: 20px;
+  border-bottom-left-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  flex-wrap: wrap; 
+  box-sizing: border-box; 
+}
 
 nav {
   display: flex;
-  gap: 20px;
+  gap: 5px;
+  justify-content: center;
+  flex-wrap: wrap; 
+  width: 100%; 
+  padding: 0 10px; 
 }
 
 nav a {
-  font-family: "Quicksand", serif;
+  font-family: 'Montserrat', serif;
   text-decoration: none;
   color: #fff;
   font-size: 1rem;
@@ -75,10 +81,7 @@ nav a {
 nav a:hover {
   background: #c22323;
   transform: scale(1.1);
-
 }
-
-
 .foto {
   width: 200px;
   height: 200px;
@@ -86,19 +89,20 @@ nav a:hover {
   background-size: cover;
   background-position: center;
   border-radius: 50%; 
-  border: 2px solid #a57c7c; 
-  box-shadow: 0 0 40px 20px rgba(156, 116, 116, 0.8); 
-  transition: box-shadow 0.3s ease-in-out;
+  border: 2px solid #802424; 
+  box-shadow: 0 0 40px 20px rgba(110, 35, 35, 0.8); 
+  animation: imageEntry 1s ease-out forwards;
 }
 
 #page1 h1 {
   color: #c22323;
   margin: 20px 0;
   text-align: left;
-  font-family: "Quicksand", serif;
+  font-family: "Bebas Neue", serif;
   font-weight: bold; 
   font-size: 2.5rem; 
-  animation: continuousMove 3s ease-in-out infinite, fadeIn 2s 1.5s forwards;
+  animation: textEntry 1s ease-out forwards;
+  text-align: center;
 }
 
 .redes {
@@ -107,13 +111,59 @@ nav a:hover {
   margin-top: 30px;
   opacity: 0;
   animation: fadeIn 2s 2s forwards;
+  flex-wrap: wrap; 
+  justify-content: center;
+  gap:20px;
+}
+.box {
+  width: 40px; 
+  height: 40px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
+  animation: waveMotion 3s infinite ease-in-out;
+}
+.box:nth-child(1) {
+  animation-delay: 0s;
 }
 
+.box:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.box:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+.box:nth-child(4) {
+  animation-delay: 0.6s;
+}
+
+.box:nth-child(5) {
+  animation-delay: 0.8s;
+}
+
+.box:hover {
+  transform: scale(1.1); 
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4); 
+}
+@keyframes waveMotion {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
 svg {
   width: 100%; 
   height: 100%;
 }
 
+.redes a {
+  color: #ffd700;
+}
 
 @keyframes fadeIn {
   0% {
@@ -124,50 +174,46 @@ svg {
   }
 }
 
-@keyframes continuousMove {
+@keyframes textEntry {
   0% {
-      transform: translateY(0);
-  }
-  50% {
-      transform: translateY(-10px);
+    opacity: 0;
+    transform: translateX(100px);
   }
   100% {
-      transform: translateY(0);
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes imageEntry {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
   }
 }
 
 h4 {
   color: #c22323;
-  margin: 0;
-  text-align: left;
-  font-family: "Quicksand", serif;
-  font-size: 1.2rem; 
-  font-weight: normal;
-  opacity: 0;
-  animation: fadeIn 2s 1s forwards;
-  margin-bottom: 20px;
-}
-
-.box {
-  width: 40px; 
-  height: 40px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease; 
-}
-
-.box:hover {
-  transform: scale(1.1); 
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); 
-}
-
-svg {
-  width: 100%; 
-  height: 100%;
+  font-family: 'Montserrat', serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: start; 
+  animation: textEntry 2s ease-out forwards;
+  justify-content: center;
+  display: flex;
 }
 
 #page2 {
   background: linear-gradient(90deg, #0f0c29, #632b2b, #24243e);
   height: 100vh;
-  
+}
+
+#page2 h1, #page2 p {
+  color: #ffd700;
 }
 
 nav a {
@@ -175,4 +221,70 @@ nav a {
   text-decoration: none;
   margin: 0 15px;
   font-weight: 600;
+}
+
+
+@media (max-width: 768px) {
+  #page1 {
+    flex-direction: column; 
+  }
+
+  .foto {
+    width: 150px;
+    height: 150px;
+  }
+
+  #page1 h1 {
+    font-size: 2rem; 
+  }
+
+  nav a {
+    font-size: 0.9rem; 
+    padding: 8px 15px;
+  }
+
+  .redes {
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  nav a {
+    font-size: 0.8rem; 
+    padding: 5px 10px;
+  }
+
+  #page1 h1 {
+    font-size: 1.5rem; 
+  }
+
+  .foto {
+    width: 120px;
+    height: 120px; 
+  }
+}
+@media (max-width: 768px) {
+  header {
+    padding: 5px 0; 
+  }
+
+  nav {
+    justify-content: center; 
+  }
+
+  nav a {
+    font-size: 0.2rem; 
+    padding: 10px 1px;
+  }
+}
+
+@media (max-width: 1000px) {
+  header {
+    padding: 10px 0;
+  }
+
+  nav a {
+    font-size: 0.8rem; 
+    padding: 0;
+  }
 }
