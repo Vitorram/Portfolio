@@ -324,16 +324,52 @@ nav a {
   display: none;
 }
 
-#project-details {
+#detalhesProjeto{
   margin-top: 20px;
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 10px;
   background-color: #f9f9f9;
   animation: imageEntry 1s ease-out forwards;
+  width: 400px;
+  height: 300px;
+}
+.descricao h4{
+  display: flex;
+  justify-content: center;
+  color:#000;
+}
+#page2 a img{
+  width: 50px;
+  display: flex;
+  margin: 0 0 0 50%;
+
+}
+.wrapper {
+  height: 20px;
+  display: grid;
+  place-items: center;
+  padding: 20px;
 }
 
-.description,
-.extra-info {
-  margin-bottom: 15px;
+.digitaçao{
+  width: 15ch;
+  animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+  font-family: monospace;
+  font-size: 2em;
+}
+
+@keyframes typing {
+  from {
+    width: 0
+  }
+}
+    
+@keyframes blink {
+  50% {
+    border-color: transparent
+  }
 }

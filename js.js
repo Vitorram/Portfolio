@@ -1,4 +1,4 @@
 function showProjectDetails() {
-  const projectDetails = document.getElementById('project-details');
+  const projectDetails = document.getElementById('detalhesProjeto');
   projectDetails.classList.toggle('hidden');
 }
