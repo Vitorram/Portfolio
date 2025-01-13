@@ -335,31 +335,58 @@ nav a {
   height: 300px;
 }
 .descricao h4{
-  display: flex;
-  justify-content: center;
-  color:#000;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  font-family: "Bebas Neue", serif;
+  font-size: 1.5em;
+  color: #000;
+  animation: digitacao 2s steps(22), piscar .5s step-end infinite alternate;
 }
 #page2 a img{
   width: 50px;
-  display: flex;
-  margin: 0 0 0 50%;
+  display: block;
+  margin: 10px auto 0 auto;
 
 }
 .wrapper {
-  height: 20px;
   display: grid;
   place-items: center;
-  padding: 20px;
+  text-align: center;
+  font-family: "Bebas Neue", serif;
+  font-size: 1.1em;
+  color: #000;
+  animation: digitacao 2s steps(22), piscar .5s step-end infinite alternate;
 }
-
+#detalhesProjeto1 {
+  width: 30px;
+  height: 40px;
+  background-color: #b3ff00;
+}
 .digitaçao{
-  width: 15ch;
+  width: 13ch;
   animation: typing 2s steps(22), blink .5s step-end infinite alternate;
   white-space: nowrap;
   overflow: hidden;
-  border-right: 3px solid;
-  font-family: monospace;
-  font-size: 2em;
+  border-right: 2px solid;
+  font-family: "Bebas Neue", serif;
+  font-size: 1.2em;
+}
+.oculto {
+  display: none;
+}
+
+.foto-corpo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.foto-projeto {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 10px;
 }
 
 @keyframes typing {
