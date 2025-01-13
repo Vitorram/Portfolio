@@ -30,7 +30,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: url('./4629c95666b8d131668a94b57c45f447\ \(1\).gif'); 
+  background: url('https://img.freepik.com/vetores-gratis/desenho-de-fundo-de-formas-abstratas-pretas_1017-31904.jpg?semt=ais_hybrid'); 
   background-size: cover; 
   z-index: -1;
 }
@@ -79,8 +79,8 @@ nav a {
 }
 
 nav a:hover {
-  background: #c22323;
-  transform: scale(1.1);
+  background: #504e4e;
+  transform: scale(1);
 }
 .foto {
   width: 200px;
@@ -206,16 +206,6 @@ h4 {
   justify-content: center;
   display: flex;
 }
-
-#page2 {
-  background: linear-gradient(90deg, #0f0c29, #632b2b, #24243e);
-  height: 100vh;
-}
-
-#page2 h1, #page2 p {
-  color: #ffd700;
-}
-
 nav a {
   color: #ffffff;
   text-decoration: none;
@@ -287,4 +277,63 @@ nav a {
     font-size: 0.8rem; 
     padding: 0;
   }
+
+}
+#page2{
+  display: flex;
+  
+}
+.projetos{
+  width: 200px;
+  height: 300px;
+  animation: imageEntry 1s ease-out forwards;
+  margin: 100px 0 0 200px;
+}
+.pro1 {
+  height: 25%;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Bebas Neue", serif;
+  font-weight: 200;
+  font-style: normal;
+  font-size: 30px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  color: #fff;
+}
+
+.pro {
+  background-color: rgb(228, 228, 228);
+  height: 25%;
+  border-bottom-right-radius: 30px;
+  border-bottom-left-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #000000;
+  cursor: pointer;
+}
+
+.pro:hover {
+  background-color: #504e4e;
+}
+
+.hidden {
+  display: none;
+}
+
+#project-details {
+  margin-top: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  animation: imageEntry 1s ease-out forwards;
+}
+
+.description,
+.extra-info {
+  margin-bottom: 15px;
 }
