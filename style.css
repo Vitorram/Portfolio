@@ -280,20 +280,25 @@ nav a {
 }
 #page2 {
   display: flex;
+  flex-wrap: wrap; 
   margin: 0 auto;
   padding: 20px;
-  
 }
-#projetos{
+
+#projetos {
   display: flex;
+  flex-wrap: wrap;
   margin-top: 100px;
-  justify-content: start;
-  padding: 50px;
+  justify-content: center; 
+  padding: 20px;
+  gap: 20px; 
 }
-.projeto1{
+
+.projeto1 {
   width: 200px;
-  height: 200px ;
+  height: 200px;
 }
+
 .titulo {
   width: 100%;
   height: 20%;
@@ -306,7 +311,8 @@ nav a {
   border-top-right-radius: 20px;
   font-family: 'Montserrat', serif;
 }
-.verMais{
+
+.verMais {
   width: 100%;
   height: 50%;
   background-color: #fff;
@@ -317,64 +323,58 @@ nav a {
   align-items: center;
   font-family: 'Montserrat', serif;
 }
+
 .verMais:hover {
- background-color: #504e4e;
+  background-color: #504e4e;
 }
+
 .descriçao {
   display: flex;
-  gap: 50px;
-  margin-right: 90px;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin: 0 auto;
   justify-content: center;
-  align-items: center; 
-  height: 100vh;
-  width: 100%; 
+  align-items: center;
+  height: auto; 
+  width: 100%;
+  padding: 20px;
 }
+
 #apagado {
   display: none;
 }
+
 .box2 {
-  width: 40%; /* Tamanho menor em relação à box21 */
-  height: auto;
+  width: 90%; 
+  max-width: 400px; 
   background-color: #ffd700;
-  padding: 20px;
+  padding: 10px;
   border-radius: 10px;
   text-align: center;
-  box-sizing: border-box; /* Inclui o padding nas dimensões */
-}
-
-.box2 h2 {
-  font-size: 24px;
-  margin-bottom: 10px;
-}
-
-.box2 p {
-  font-size: 16px;
-  margin-bottom: 20px;
-}
-
-.box2 a {
-  font-size: 14px;
-  text-decoration: none;
+  box-sizing: border-box;
 }
 
 .box21 {
-  width: 60%; /* Maior largura que .box2 */
-  height: auto;
-  padding: 10px;
+  width: 90%; 
+  max-width: 600px; 
+  padding: 2px;
   border-radius: 10px;
-  background-color: #e0e0e0; /* Fundo diferente para destaque */
+  background-color: #e0e0e0;
   display: flex;
   justify-content: center;
   align-items: center;
+  border: solid 3px;
 }
+
 .video-container video {
   width: 100%;
   height: 100%;
-  border-radius: 10px; 
-  object-fit: cover; 
+  border-radius: 2px;
+  object-fit: cover;
 }
+
 .voltar {
-  width: 80px;
+  width: 100px; 
   height: 50px;
   padding: 5px;
   background-color: #000000;
@@ -388,4 +388,45 @@ nav a {
 
 .voltar:hover {
   background-color: #343434;
+}
+
+
+@media (max-width: 768px) {
+  #projetos {
+    flex-direction: column; 
+    align-items: center;
+    padding: 10px;
+  }
+
+  .projeto1 {
+    width: 150px; 
+    height: 150px;
+  }
+
+  .box2,
+  .box21 {
+    width: 100%; 
+  }
+
+  .voltar {
+    width: 80px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .titulo,
+  .verMais {
+    font-size: 12px; 
+  }
+
+  .box2 h2,
+  .box2 p {
+    font-size: 14px;
+  }
+
+  .voltar {
+    font-size: 12px;
+    padding: 5px;
+  }
 }
