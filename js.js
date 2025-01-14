@@ -10,7 +10,7 @@ document.querySelectorAll('.verMais').forEach((button) => {
       descricao.style.display = 'flex';
       descricao.style.justifyContent = 'center';
       descricao.style.alignItems = 'center';
-      descricao.style.height = '100vh';
+      
 
       descricao.querySelectorAll('.box2').forEach((box) => {
           box.style.display = 'block';
