@@ -224,11 +224,11 @@ nav a {
   }
 
   #page1 h1 {
-    font-size: 2rem; 
+    font-size: 4rem; 
   }
 
   nav a {
-    font-size: 0.9rem; 
+    font-size: 1.2rem; 
     padding: 8px 15px;
   }
 
@@ -239,12 +239,12 @@ nav a {
 
 @media (max-width: 480px) {
   nav a {
-    font-size: 0.8rem; 
+    font-size: 1.1rem; 
     padding: 5px 10px;
   }
 
   #page1 h1 {
-    font-size: 1.5rem; 
+    font-size: 1.6rem; 
   }
 
   .foto {
@@ -262,7 +262,7 @@ nav a {
   }
 
   nav a {
-    font-size: 0.2rem; 
+    font-size: 1.2rem; 
     padding: 10px 1px;
   }
 }
