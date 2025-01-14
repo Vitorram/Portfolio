@@ -11,36 +11,47 @@
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rubik+Vinyl&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="body2">
-    <header>
-      <nav>
-        <a href="./index.html" data-section="home">Home</a>
-        <a href="./page2.html" data-section="projetos" style="border-bottom: solid #fff 1px;">Projetos</a>
-        <a href="./page3.html" data-section="tecnologias">Tecnologias</a>
-        <a href="./page4.html" data-section="sobre">Sobre</a>
-      </nav>
-    </header>
-
-    <div id="page2">
-      <div class="projetos">
-        <div class="pro1"><span>iF Finance</span></div>
-        <div class="pro" onclick="showProjectDetails()">
-          <p>Ver mais ▶</p>
-        </div>
-        <div id="detalhesProjeto" class="hidden">
-          <div class="descricao">
-            <h4>Descrição do Projeto</h4>
-            <p>O projeto foi desenvolvido em sala de aula com a orientação do professor, com o objetivo de introduzir os conceitos fundamentais das linguagens HTML, CSS e JavaScript. De forma resumida, é um projeto de um app feito para investimentos </p>
+    <div class="body2">
+      <header>
+        <nav>
+          <a href="./index.html" data-section="home">Home</a>
+          <a href="./page2.html" data-section="projetos" style="border-bottom: solid #fff 1px;">Projetos</a>
+          <a href="./page3.html" data-section="tecnologias">Tecnologias</a>
+          <a href="./page4.html" data-section="sobre">Sobre</a>
+        </nav>
+      </header>
+  <div id="page2">
+      <div id="projetos">
+          <div class="projeto1">
+            <div class="titulo"> IFFinance</div>
+            <div class="verMais">  Ver mais ⮕</div>
           </div>
-          <div class="extra-info">
-            <div class="wrapper">
-              <div class="digitaçao">
-                Repositorio Git</div>
-        </div>
       </div>
+      <button class="voltar" style="display: none;">Voltar</button>
+      <div id="projetos">
+          <div class="projeto1">
+            <div class="titulo"> Portifolio</div>
+            <div class="verMais">  Ver mais ⮕</div>
+          </div>
+      </div>
+      <div class="descriçao" id="apagado">
+        <div class="box2">
+          <h2>Descriçao</h2>
+          <p>O projeto foi desenvolvido em ambiente acadêmico, sob a orientação do professor, com o objetivo de introduzir os conceitos fundamentais das linguagens HTML, CSS e JavaScript. O resultado é um aplicativo web voltado para investimentos, projetado para oferecer uma interface amigável e interativa, permitindo aos usuários simular e acompanhar o desempenho de diferentes cenários de investimento. Durante o desenvolvimento, foram aplicados princípios básicos de estruturação de páginas, estilização e funcionalidade, consolidando o aprendizado prático das tecnologias envolvidas.</p>
+          <h2>Link Git</h2>
+    <a href="https://github.com/Vitorram/IF-financias-projeto">
+      <img style="width: 50px; height: 50px;" src="https://img.icons8.com/?size=100&id=62856&format=png&color=000000" alt="GitHub Logo">
+    </a>
+  </div> 
+  <div class="box21">
+    <div class="video-container">
+      <video controls>
+        <source src="./Document - Google Chrome 2025-01-13 23-01-05.mp4" type="video/mp4" />
+        Seu navegador não suporta vídeos.
+      </video>
     </div>
   </div>
-
+</div>
   <script src="./js.js"></script>
 </body>
 </html>

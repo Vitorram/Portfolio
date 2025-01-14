@@ -1,21 +1,47 @@
-function showProjectDetails() {
-  const projectDetails = document.getElementById('detalhesProjeto');
-  projectDetails.classList.toggle('hidden');
-}
-function mostrarDetalhesProjeto() {
-  const detalhes = document.getElementById('detalhesProjeto');
-  if (detalhes.classList.contains('oculto')) {
-    detalhes.classList.remove('oculto');
-  } else {
-    detalhes.classList.add('oculto');
-  }
-}
+document.querySelectorAll('.verMais').forEach((button) => {
+  button.addEventListener('click', () => {
+      // Esconder as divs de projetos
+      document.querySelectorAll('#projetos').forEach((projeto) => {
+          projeto.style.display = 'none';
+      });
 
-function toggleFoto(fotoId) {
-  const foto = document.getElementById(`foto${fotoId}`);
-  if (foto.classList.contains('oculto')) {
-    foto.classList.remove('oculto');
-  } else {
-    foto.classList.add('oculto');
-  }
+      // Mostrar as divs box2 e fazê-las ocupar a tela
+      const descricao = document.querySelector('.descriçao');
+      descricao.style.display = 'flex';
+      descricao.style.justifyContent = 'center';
+      descricao.style.alignItems = 'center';
+      descricao.style.height = '100vh'; // Ocupa a altura total da tela
+
+      descricao.querySelectorAll('.box2').forEach((box) => {
+          box.style.display = 'block';
+      });
+
+      // Mostrar o botão de voltar
+      const voltarButton = document.querySelector('.voltar');
+      if (voltarButton) {
+          voltarButton.style.display = 'block';
+      }
+  });
+});
+
+// Lógica para o botão de voltar
+const voltarButton = document.querySelector('.voltar');
+if (voltarButton) {
+  voltarButton.addEventListener('click', () => {
+      
+      document.querySelectorAll('#projetos').forEach((projeto) => {
+          projeto.style.display = 'block';
+      });
+
+    
+      const descricao = document.querySelector('.descriçao');
+      descricao.style.display = 'none';
+
+      descricao.querySelectorAll('.box2').forEach((box) => {
+          box.style.display = 'none';
+      });
+
+      
+      voltarButton.style.display = 'none';
+  });
 }

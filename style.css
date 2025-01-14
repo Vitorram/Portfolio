@@ -60,7 +60,6 @@ header {
 
 nav {
   display: flex;
-  gap: 5px;
   justify-content: center;
   flex-wrap: wrap; 
   width: 100%; 
@@ -279,120 +278,114 @@ nav a {
   }
 
 }
-#page2{
+#page2 {
   display: flex;
+  margin: 0 auto;
+  padding: 20px;
   
 }
-.projetos{
+#projetos{
+  display: flex;
+  margin-top: 100px;
+  justify-content: start;
+  padding: 50px;
+}
+.projeto1{
   width: 200px;
-  height: 300px;
-  animation: imageEntry 1s ease-out forwards;
-  margin: 100px 0 0 200px;
+  height: 200px ;
 }
-.pro1 {
-  height: 25%;
+.titulo {
+  width: 100%;
+  height: 20%;
   background-color: black;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: "Bebas Neue", serif;
-  font-weight: 200;
-  font-style: normal;
-  font-size: 30px;
-  border-top-left-radius: 30px;
-  border-top-right-radius: 30px;
   color: #fff;
-}
-
-.pro {
-  background-color: rgb(228, 228, 228);
-  height: 25%;
-  border-bottom-right-radius: 30px;
-  border-bottom-left-radius: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #000000;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  font-family: 'Montserrat', serif;
+}
+.verMais{
+  width: 100%;
+  height: 50%;
+  background-color: #fff;
+  border-end-end-radius: 20px;
+  border-end-start-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Montserrat', serif;
+}
+.verMais:hover {
+ background-color: #504e4e;
+}
+.descriçao {
+  display: flex;
+  gap: 50px;
+  margin-right: 90px;
+  justify-content: center;
+  align-items: center; 
+  height: 100vh;
+  width: 100%; 
+}
+#apagado {
+  display: none;
+}
+.box2 {
+  width: 40%; /* Tamanho menor em relação à box21 */
+  height: auto;
+  background-color: #ffd700;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-sizing: border-box; /* Inclui o padding nas dimensões */
+}
+
+.box2 h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.box2 p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.box2 a {
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.box21 {
+  width: 60%; /* Maior largura que .box2 */
+  height: auto;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #e0e0e0; /* Fundo diferente para destaque */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.video-container video {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px; 
+  object-fit: cover; 
+}
+.voltar {
+  width: 80px;
+  height: 50px;
+  padding: 5px;
+  background-color: #000000;
+  color: white;
+  border: none;
+  border-radius: 5px;
   cursor: pointer;
+  font-size: 16px;
+  margin-top: 50px;
 }
 
-.pro:hover {
-  background-color: #504e4e;
-}
-
-.hidden {
-  display: none;
-}
-
-#detalhesProjeto{
-  margin-top: 20px;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  background-color: #f9f9f9;
-  animation: imageEntry 1s ease-out forwards;
-  width: 400px;
-  height: 300px;
-}
-.descricao h4{
-  display: grid;
-  place-items: center;
-  text-align: center;
-  font-family: "Bebas Neue", serif;
-  font-size: 1.5em;
-  color: #000;
-  animation: digitacao 2s steps(22), piscar .5s step-end infinite alternate;
-}
-#page2 a img{
-  width: 50px;
-  display: block;
-  margin: 10px auto 0 auto;
-
-}
-.wrapper {
-  display: grid;
-  place-items: center;
-  text-align: center;
-  font-family: "Bebas Neue", serif;
-  font-size: 1.1em;
-  color: #000;
-  animation: digitacao 2s steps(22), piscar .5s step-end infinite alternate;
-}
-
-.digitaçao{
-  width: 13ch;
-  animation: typing 2s steps(22), blink .5s step-end infinite alternate;
-  white-space: nowrap;
-  overflow: hidden;
-  border-right: 2px solid;
-  font-family: "Bebas Neue", serif;
-  font-size: 1.2em;
-}
-.oculto {
-  display: none;
-}
-
-.foto-corpo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-}
-
-.foto-projeto {
-  max-width: 100%;
-  max-height: 100%;
-  border-radius: 10px;
-}
-
-@keyframes typing {
-  from {
-    width: 0
-  }
-}
-    
-@keyframes blink {
-  50% {
-    border-color: transparent
-  }
+.voltar:hover {
+  background-color: #343434;
 }
