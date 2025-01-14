@@ -1,21 +1,21 @@
 function showProjectDetails() {
-  // Esconde a div de projetos
-  document.querySelector('.projetos').classList.add('hidden');
-  
-  // Exibe a div de detalhes do projeto
-  document.getElementById('detalhesProjeto').classList.remove('hidden');
-  
-  // Exibe a imagem do corpo do projeto
-  document.querySelector('.foto-corpo').classList.remove('hidden');
+  const projectDetails = document.getElementById('detalhesProjeto');
+  projectDetails.classList.toggle('hidden');
+}
+function mostrarDetalhesProjeto() {
+  const detalhes = document.getElementById('detalhesProjeto');
+  if (detalhes.classList.contains('oculto')) {
+    detalhes.classList.remove('oculto');
+  } else {
+    detalhes.classList.add('oculto');
+  }
 }
 
-function goBack() {
-  // Exibe a div de projetos
-  document.querySelector('.projetos').classList.remove('hidden');
-  
-  // Esconde a div de detalhes do projeto
-  document.getElementById('detalhesProjeto').classList.add('hidden');
-  
-  // Esconde a imagem do corpo do projeto
-  document.querySelector('.foto-corpo').classList.add('hidden');
+function toggleFoto(fotoId) {
+  const foto = document.getElementById(`foto${fotoId}`);
+  if (foto.classList.contains('oculto')) {
+    foto.classList.remove('oculto');
+  } else {
+    foto.classList.add('oculto');
+  }
 }

@@ -358,11 +358,7 @@ nav a {
   color: #000;
   animation: digitacao 2s steps(22), piscar .5s step-end infinite alternate;
 }
-#detalhesProjeto1 {
-  width: 30px;
-  height: 40px;
-  background-color: #b3ff00;
-}
+
 .digitaçao{
   width: 13ch;
   animation: typing 2s steps(22), blink .5s step-end infinite alternate;
