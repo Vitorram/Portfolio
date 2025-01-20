@@ -30,7 +30,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: url('https://img.freepik.com/vetores-gratis/desenho-de-fundo-de-formas-abstratas-pretas_1017-31904.jpg?semt=ais_hybrid'); 
+  background-color: #000000;
   background-size: cover; 
   z-index: -1;
 }
@@ -291,7 +291,8 @@ nav a {
   margin-top: 100px;
   justify-content: center; 
   padding: 20px;
-  gap: 20px; /
+  gap: 20px; 
+  animation: imageEntry 1s ease-out forwards;
 }
 
 .projeto1 {
@@ -338,6 +339,7 @@ nav a {
   height: auto; 
   width: 100%;
   padding: 20px;
+  animation: imageEntry 1s ease-out forwards;
 }
 
 #apagado {
@@ -428,5 +430,131 @@ nav a {
   .voltar {
     font-size: 12px;
     padding: 5px;
+  }
+}
+#apresenta {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+  margin: 50px auto;
+}
+
+.box3 {
+  margin-top: 50px;
+  width: 300px;
+  text-align: center;
+  background-color: #e0e0e0;
+  padding: 20px;
+  border-radius: 8px;
+  animation: textEntry 2s ease-out forwards;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.box3 .foto1 {
+  width: 200px;
+  height: 200px;
+  background: #000000;
+  margin: 20px auto;
+  border-radius: 50%;
+  
+}
+
+.box3 .nome {
+  margin-top: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333333;
+}
+
+.box31 {
+  margin-top: 50px;
+  width: 800px;
+  height: auto;
+  background-color: #808080;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 1.6;
+  animation: textEntry 1s ease-out forwards;
+}
+#tec {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+  margin: 100px auto;
+}
+.tecs {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  background-color: #e0e0e0;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: textEntry 2s ease-out forwards;
+}
+.tecs svg {
+  width: 50px;
+  animation: textEntry 2s ease-out forwards;
+  height: 50px;
+}
+.tecs:hover::after {
+  content: attr(data-description);
+  width: 50%;
+  background-color: #000;
+  color: #fff;
+  padding: 10px 10px; 
+  text-align: center; 
+  border-radius: 5px;
+  font-size: 14px;
+  white-space: normal; 
+  animation: textEntry 1s ease-out forwards;
+}
+
+
+@media (max-width: 768px) {
+  #tec {
+    flex-wrap: wrap; 
+    justify-content: space-around; 
+  }
+
+  .tecs {
+    width: 250px;
+    height: 150px; 
+  }
+
+  .tecs svg {
+    width: 80px; 
+    height: 80px; 
+  }
+  
+  .tecs:hover::after {
+    width: 90%; 
+    font-size: 12px; 
+  }
+}
+
+
+@media (max-width: 480px) {
+  .tecs {
+    width: 200px; 
+    height: 120px; 
+  }
+
+  .tecs svg {
+    width: 40px;
+    height: 40px; 
+  }
+  
+  .tecs:hover::after {
+    width: 100%; 
+    padding: 20px;
+    font-size: 12px; 
+    
   }
 }
