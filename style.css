@@ -433,15 +433,14 @@ nav a {
   }
 }
 #apresenta {
-  display: flex;
+  display: block;
+  margin-top: 100px;
   justify-content: center;
-  align-items: flex-start;
-  gap: 20px;
-  margin: 50px auto;
+  gap: 10px;
 }
 
 .box3 {
-  margin-top: 50px;
+  margin: 0 auto;
   width: 300px;
   text-align: center;
   background-color: #e0e0e0;
@@ -468,17 +467,21 @@ nav a {
 }
 
 .box31 {
-  margin-top: 50px;
-  width: 800px;
-  height: auto;
-  background-color: #808080;
-  padding: 20px;
+  margin: 0 auto;
+  width: 600px;
+  height: 400px;
+  background-color: #000000;
+  padding: 10px;
   border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   color: #ffffff;
   font-size: 16px;
-  line-height: 1.6;
+  line-height: 1.5;
   animation: textEntry 1s ease-out forwards;
+  
+}
+.box31 p {
+  text-align: center;
+  
 }
 #tec {
   display: flex;
@@ -518,6 +521,9 @@ nav a {
 
 
 @media (max-width: 768px) {
+  .box31{
+    width: 100%;
+  }
   #tec {
     flex-wrap: wrap; 
     justify-content: space-around; 
