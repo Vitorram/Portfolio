@@ -1,11 +1,12 @@
 document.querySelectorAll('.verMais').forEach((button) => {
   button.addEventListener('click', () => {
-      // Esconder as divs de projetos
+     
+    
       document.querySelectorAll('#projetos').forEach((projeto) => {
           projeto.style.display = 'none';
       });
 
-      // Mostrar as divs box2 e fazê-las ocupar a tela
+      
       const descricao = document.querySelector('.descriçao');
       descricao.style.display = 'flex';
       descricao.style.justifyContent = 'center';
@@ -22,7 +23,7 @@ document.querySelectorAll('.verMais').forEach((button) => {
   });
 });
 
-// Lógica para o botão de voltar
+
 const voltarButton = document.querySelector('.voltar');
 if (voltarButton) {
   voltarButton.addEventListener('click', () => {
