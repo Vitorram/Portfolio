@@ -1,7 +1,8 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Quicksand', sans-serif;
+  font-family: 'Pacifico', cursive;
+  background-color: #000;
 }
 
 #page1 {
@@ -20,7 +21,7 @@ body {
   position: relative; 
   height: 100vh; 
   width: 100vw; 
-  overflow: hidden;
+  
 }
 
 .body2::before {
@@ -67,7 +68,7 @@ nav {
 }
 
 nav a {
-  font-family: 'Montserrat', serif;
+  font-family: 'Playfair Display', serif;
   text-decoration: none;
   color: #fff;
   font-size: 1rem;
@@ -94,10 +95,10 @@ nav a:hover {
 }
 
 #page1 h1 {
-  color: #fff;
+  color: #661717;
   margin: 20px 0;
   text-align: left;
-  font-family: "Bebas Neue", serif;
+ 
   font-weight: bold; 
   font-size: 2.5rem; 
   animation: textEntry 1s ease-out forwards;
@@ -197,7 +198,6 @@ svg {
 
 h4 {
   color: #fff;
-  font-family: 'Montserrat', serif;
   font-size: 1.5rem;
   font-weight: bold;
   text-align: start; 
@@ -310,7 +310,7 @@ nav a {
   align-items: center;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
-  font-family: 'Montserrat', serif;
+ 
 }
 
 .verMais {
@@ -322,7 +322,7 @@ nav a {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: 'Montserrat', serif;
+  
 }
 
 .verMais:hover {
@@ -443,7 +443,6 @@ nav a {
   margin: 0 auto;
   width: 300px;
   text-align: center;
-  background-color: #e0e0e0;
   padding: 20px;
   border-radius: 8px;
   animation: textEntry 2s ease-out forwards;
@@ -463,7 +462,7 @@ nav a {
   margin-top: 10px;
   font-size: 18px;
   font-weight: bold;
-  color: #333333;
+  color: #720c0c;
 }
 
 .box31 {
