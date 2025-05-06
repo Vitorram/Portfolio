@@ -15,6 +15,7 @@ body {
   z-index: 2; 
   gap: 60px;
   flex-wrap: wrap;
+  animation: slideInUp 1s ease-out forwards;
 }
 
 .body2 {
@@ -57,6 +58,8 @@ header {
   z-index: 1000;
   flex-wrap: wrap; 
   box-sizing: border-box; 
+  animation: slideInDown 1s ease-out forwards;
+  
 }
 
 nav {
@@ -68,7 +71,11 @@ nav {
 }
 
 nav a {
-  font-family: 'Playfair Display', serif;
+  font-family: "Gidole", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-weight: 400;
+  font-style:normal;
   text-decoration: none;
   color: #fff;
   font-size: 1rem;
@@ -95,7 +102,7 @@ nav a:hover {
 }
 
 #page1 h1 {
-  color: #661717;
+  color: #ffffff;
   margin: 20px 0;
   text-align: left;
  
@@ -205,7 +212,7 @@ h4 {
   justify-content: center;
   display: flex;
 }
-nav a {
+nav a, footer{
   color: #ffffff;
   text-decoration: none;
   margin: 0 15px;
@@ -286,6 +293,7 @@ nav a {
 }
 
 #projetos {
+  margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
   margin-top: 100px;
@@ -298,6 +306,7 @@ nav a {
 .projeto1 {
   width: 200px;
   height: 200px;
+  animation: zoomIn 1s ease-out forwards;
 }
 
 .titulo {
@@ -354,7 +363,9 @@ nav a {
   border-radius: 10px;
   text-align: center;
   box-sizing: border-box;
+  animation: zoomIn 1s ease-out forwards;
 }
+
 
 .box21 {
   width: 100%; 
@@ -366,6 +377,7 @@ nav a {
   justify-content: center;
   align-items: center;
   border: solid 3px;
+  animation: zoomIn 1s ease-out forwards;
 }
 
 .video-container video {
@@ -491,10 +503,11 @@ nav a {
 }
 .tecs {
   position: relative;
-  width: 300px;
-  height: 200px;
+  width: 100px;
+  height: 100px;
   background-color: #e0e0e0;
   border-radius: 20px;
+  margin-right: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -505,18 +518,7 @@ nav a {
   animation: textEntry 2s ease-out forwards;
   height: 50px;
 }
-.tecs:hover::after {
-  content: attr(data-description);
-  width: 50%;
-  background-color: #000;
-  color: #fff;
-  padding: 10px 10px; 
-  text-align: center; 
-  border-radius: 5px;
-  font-size: 14px;
-  white-space: normal; 
-  animation: textEntry 1s ease-out forwards;
-}
+
 
 
 @media (max-width: 768px) {
@@ -561,5 +563,37 @@ nav a {
     padding: 20px;
     font-size: 12px; 
     
+  }
+}
+@keyframes zoomIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
