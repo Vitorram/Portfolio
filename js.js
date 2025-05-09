@@ -83,3 +83,30 @@ document.querySelectorAll('.close-btn').forEach(btn => {
     btn.closest('.project-detail').classList.remove('visible');
   });
 });
+
+  const btnIniciar = document.getElementById('btnIniciar');
+  const telaInicial = document.getElementById('inicio');
+
+  btnIniciar.addEventListener('click', () => {
+    telaInicial.classList.add('oculta');
+    document.body.style.overflowY = 'auto'; // ativa scroll após iniciar
+  });
+
+  // desativa scroll enquanto na tela inicial
+  document.body.style.overflowY = 'hidden';
+  
+  const btnTopo = document.getElementById('btnTopo');
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+      btnTopo.style.display = "block";
+    } else {
+      btnTopo.style.display = "none";
+    }
+  });
+
+  btnTopo.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+
