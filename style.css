@@ -5,143 +5,72 @@
   box-sizing: border-box;
   font-family: 'Gidole', sans-serif;
 }
+
+body {
+  background-color: #fff;
+  color: #222;
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+}
+
+section {
+  scroll-snap-align: start;
+}
+
+/* Tela inicial */
 .tela-inicial {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: #000;
-  color: #fff;
+  background: #fff;
+  color: #000;
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 9999;
   transition: opacity 0.8s ease, visibility 0.8s;
 }
-
 .tela-inicial.oculta {
   opacity: 0;
   visibility: hidden;
 }
-
 .conteudo-inicial {
   text-align: center;
   animation: fadeIn 1s ease forwards;
 }
-
 .tela-inicial h1 {
   font-size: 2.5rem;
   margin-bottom: 20px;
 }
-
 .tela-inicial button {
   padding: 12px 30px;
-  background: #fff;
-  color: #000;
+  background: #000;
+  color: #fff;
   border: none;
   font-size: 1rem;
   border-radius: 8px;
   cursor: pointer;
   transition: background 0.3s;
 }
-
 .tela-inicial button:hover {
-  background: #5e2ca5;
-  color: #fff;
+  background: #555;
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-#btnTopo {
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  z-index: 999;
-  background-color: #5e2ca5;
-  color: white;
-  border: none;
-  border-radius: 50%;
-  padding: 12px 16px;
-  font-size: 20px;
-  cursor: pointer;
-  display: none;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.4);
-  transition: background 0.3s ease, transform 0.2s ease;
-}
-
-#btnTopo:hover {
-  background-color: #7a3cf4;
-  transform: scale(1.1);
-}
-
-/* Body e scroll snap */
-body {
-  background-color: #37384f;
-  position: relative;
-  scroll-snap-type: y mandatory;
-  overflow-y: scroll;
-}
-section {
-  scroll-snap-align: start;
-}
-#page1::before {
-  content: "INÍCIO";
-  position: absolute;
-  top: 80px;
-  left: 20px;
-  color: #ffffff;
-  font-size: 1.2rem;
-  font-weight: bold;
-}
-
-#apresenta::before {
-  content: "APRESENTAÇÃO";
-  position: absolute;
-  top: 80px;
-  left: 20px;
-  color: #fed595;
-  font-size: 1.2rem;
-  font-weight: bold;
-}
-
-#projetos::before {
-  content: "PROJETOS";
-  position: absolute;
-  top: 80px;
-  left: 20px;
-  color: #fff;
-  font-size: 1.2rem;
-  font-weight: bold;
-}
-
-#tec::before {
-  content: "TECNOLOGIAS";
-  position: absolute;
-  top: 80px;
-  left: 20px;
-  color: #000;
-  font-size: 1.2rem;
-  font-weight: bold;
-}
-
-/* Header e Navegação */
+/* Header e navegação */
 header {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 60px;
-  padding: 0 20px;
-  background: rgba(0, 0, 0, 0.6);
+  background: #fff;
+  color: #000;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-end-end-radius: 20px;
-  border-bottom-left-radius: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  border-bottom: 1px solid #ddd;
   z-index: 1000;
   animation: slideInDown 1s ease-out forwards;
 }
@@ -153,105 +82,150 @@ nav {
 nav a {
   font-weight: bold;
   font-size: 1rem;
-  color: #fff;
+  color: #000;
   text-decoration: none;
   padding: 8px 16px;
   border-radius: 25px;
   transition: background 0.3s;
 }
 nav a:hover {
-  background: #504e4e;
+  background: #eee;
 }
 
-/* Page1, Apresenta, Projetos e Tec (removida altura fixa para auto-ajustar) */
-#page1,
-#apresenta,
-#projetos,
-#tec {
-  /* height: 800px; */
+/* Botão topo */
+#btnTopo {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 999;
+  background-color: #000;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 12px 16px;
+  font-size: 20px;
+  cursor: pointer;
+  display: none;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+#btnTopo:hover {
+  background-color: #555;
+  transform: scale(1.1);
+}
+
+/* Seções principais */
+#page1, #apresenta, #projetos, #tec {
   min-height: 800px;
-  overflow: hidden;
   width: 100%;
   position: relative;
+  padding: 100px 20px 20px;
+  background: #fff;
 }
 
-/* Hero */
+/* Hero / Introdução */
 #hero {
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  color: #fed595;
+  color: #333;
 }
 #hero .hero-content h2 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
 }
-#hero .typing { white-space: nowrap; overflow: hidden; }
-#hero .cursor { display: inline-block; animation: blink 0.7s infinite; }
-@keyframes blink { 0%,50%{opacity:1}51%,100%{opacity:0} }
-#hero p { font-size: 1.2rem; margin-bottom: 2rem; }
-.btn {
-  display: inline-block;
-  padding: .8rem 1.5rem;
-  border: 2px solid #fed595;
-  border-radius: 30px;
-  color: #fed595;
-  text-decoration: none;
-  transition: background .3s;
+#hero .typing {
+  white-space: nowrap;
+  overflow: hidden;
 }
-.btn:hover { background: rgba(254,213,149,0.2); }
+#hero .cursor {
+  display: inline-block;
+  animation: blink 0.7s infinite;
+}
+@keyframes blink {
+  0%,50%{opacity:1} 51%,100%{opacity:0}
+}
+#hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
 
-/* Page1 */
+.bt_ver {
+  bottom: 10px;      
+  right: 10px;     
+  background-color: rgba(0,0,0,0.6); 
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: bold;
+  font-family: 'Gidole', sans-serif;
+  z-index: 10;
+}
+
+/* Página inicial */
 #page1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 60px;
+  gap: 40px;
   flex-wrap: wrap;
-  animation: slideInUp 1s ease-out forwards;
-  padding: 100px 20px 20px;
   text-align: center;
 }
+
 .foto {
   width: 200px;
   height: 200px;
   border-radius: 50%;
-  border: 2px solid #fff;
+  border: 2px solid #000;
   background: url('./42ec1736-56ab-4ece-9c75-e86d19867beb.jpeg') center/cover no-repeat;
-  box-shadow: 0 0 40px 20px rgba(235,235,235,0.8);
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
   animation: imageEntry 1s ease-out forwards;
-  overflow: hidden;
 }
+
 #page1 h1 {
-  color: #fed595;
+  color: #000;
   font-size: 2.5rem;
   font-weight: bold;
   animation: textEntry 1s ease-out forwards;
 }
+
+/* Redes ao lado da foto */
 .redes {
   display: flex;
-  gap: 50px;
-  margin-top: 30px;
-  opacity: 0;
-  animation: fadeIn 2s 2s forwards;
-  flex-wrap: wrap;
-  justify-content: center;
+  flex-direction: column;
+  gap: 15px;
+  position: relative;
+  left: -350px; /* move para a direita */
+  bottom: 90px;
+  
 }
-.box {
-  border-radius: 50%;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  animation: waveMotion 3s infinite ease-in-out;
-}
-.box:hover { transform: scale(1.1); box-shadow: 0 20px 20px rgba(0,0,0,0.4); }
 
-@keyframes waveMotion {0%,100%{transform:translateY(0)}50%{transform:translateY(-20px)}}
-@keyframes fadeIn { to{opacity:1} }
-@keyframes textEntry { from{opacity:0;transform:translateX(100px)} to{opacity:1;transform:translateX(0)} }
-@keyframes imageEntry { from{opacity:0;transform:translateX(-100px)} to{opacity:1;transform:translateX(0)} }
-@keyframes zoomIn { from{opacity:0;transform:scale(0.8)} to{opacity:1;transform:scale(1)} }
-@keyframes slideInUp { from{opacity:0;transform:translateY(50px)} to{opacity:1;transform:translateY(0)} }
-@keyframes slideInDown { from{opacity:0;transform:translateY(-50px)} to{opacity:1;transform:translateY(0)} }
+.box {
+  width: 45px;
+  height: 45px;
+  background: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: none;
+  box-shadow: none;
+}
+
+/* Remove hover */
+.box:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+/* SVG dentro dos botões */
+.box svg {
+  width: 100%;
+  height: 100%;
+  fill: white;
+}
 
 /* Apresentação */
 #apresenta {
@@ -259,10 +233,68 @@ nav a:hover {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 20px;
-  padding: 100px 20px 20px;
-  background-color: #527952;
+  gap: 40px;
+  min-height: 100vh;
+  padding: 0 20px;
+  background-color: #ffffff;
+  text-align: center;
 }
+.box3 .nome {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #000;
+}
+.timeline {
+  position: relative;
+  max-width: 700px;
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 40px;
+  border-left: 4px solid #000000;
+  bottom: 180px;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-date {
+  position: absolute;
+  left: -200px;
+  top: 100;
+  width: 100px;
+  color: #4e4e4e;
+  font-weight: bold;
+  font-size: 0.9rem;
+  text-align: right;
+}
+
+.timeline-content {
+  background-color: #fff;
+  color: #12221e;
+  padding: 15px 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -12px;
+  top: 12px;
+  width: 16px;
+  height: 16px;
+  background-color: #fed595;
+  border-radius: 50%;
+  border: 4px solid #527952;
+  box-sizing: content-box;
+}
+
 .box3 {
   text-align: center;
   padding: 20px;
@@ -270,192 +302,235 @@ nav a:hover {
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
   animation: textEntry 2s ease-out forwards;
   max-width: 500px;
-  width: 100%;
 }
-.box3 .nome { font-size:1.8rem; font-weight:bold; color:#fed595; }
 .box31 {
-  max-width:600px; width:100%; background:#fed595; color:#12221e;
-  padding:20px; border-radius:8px; line-height:1.5;
-  animation:textEntry 1s ease-out forwards; text-align:center;
+  max-width:600px;
+  background:#f0f0f0;
+  color:#222;
+  padding:20px;
+  border-radius:8px;
+  line-height:1.5;
+  text-align:center;
 }
 
 /* Projetos */
 #projetos {
-  position: relative;
- background-color: #000;
-  background-size: contain;
-  color: #fff;
-  overflow: hidden;
-  padding: 100px 20px 40px;
+  background-color: #f9f9f9;
+  padding: 50px 20px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 40px;
-  z-index: 1;
+  gap: 50px;
 }
 
 .projects-tabs {
-  margin-top: 300px;
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 40px;
   justify-content: center;
 }
 
 .project-tab {
-  width: 200px;
-  
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+  width: 300px;
+  height: 430px;
+  background: #fff;
+  border: 2px solid #000000;
+
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  text-align: center;
-  cursor: pointer;
-  overflow: hidden;
-  border-radius: 10px;
+  align-items: flex-start;
+  transition: transform 0.3s ease;
+}
+
+.project-tab:hover {
+  transform: translateY(-5px);
+}
+
+.project-tab img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
 }
 
 .project-tab .titulo {
-  background: #2d1a22;
-  padding: 8px;
-  font-weight: normal;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #0c0c0c;
+  padding: 15px 20px 5px;
 }
 
-.project-tab .verMais {
-  background: #fff;
+.project-tab .tecnologias {
+  padding: 0 20px;
+  color: #1b1b1b;
+  font-weight: bold;
+  line-height: 1.6;
+}
+
+.project-tab .repo {
+  padding: 20px;
   color: #000;
-  padding: 8px;
-  font-weight: normal;
-  transition: background 0.3s;
+  font-size: 0.9rem;
+  word-break: break-word;
+  bottom: 50px;
+}
+.ver-mais {
+  position: absolute;
+  border-radius: 8px;
+  margin: 0,auto;
+  z-index: 10;
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 0;
+  cursor: pointer;
+  font-family: 'Gidole', sans-serif;
+  font-weight: bold;
+  transition: background 0.3s ease;
 }
 
-.project-tab .verMais:hover {
-  background: #9c9c9c;
+
+
+.expandido-conteudo {
+  opacity: 0;
+  padding: 0 20px 20px;
+  transition: opacity 0.3s ease 0.1s;
 }
 
-.project-details-wrapper {
+
+.galeria {
   display: flex;
-  gap: 40px;
+  gap: 8px;
+  margin-top: 12px;
+}
+.galeria img {
+  width: calc(50% - 4px);
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+
+.project-tab.expandido {
+  height: 700px;         
+}
+.project-tab.expandido .expandido-conteudo {
+  opacity: 1;
+}
+
+.project-tab .repo span {
+  color: #202020;
+  font-weight: bold;
+}
+.contato-container {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
   justify-content: center;
   flex-wrap: wrap;
-  width: 100%;
 }
 
-.project-detail {
-  
-  display: none;
-  width: 400px;
-  background: #1a1a1a;
-  border-radius: 12px;
-  padding: 20px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
-  flex-direction: column;
+.botao-contato {
+  background-color: #2d2d2d;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: bold;
+  display: flex;
   align-items: center;
-  animation: fadeIn 0.3s ease forwards;
-}
-.haha{
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-
-}
-.project-detail.visible {
-  display: flex;
-  width: 50%;
-  height: 50%;
+  gap: 8px;
+  transition: background-color 0.3s ease;
 }
 
-.project-detail img {
-  width: 30%; /* Ocupa toda a largura da div */
-  height: 30%; /* Ajusta a altura automaticamente */
-  border-radius: 6px;
-  margin: 10px 0;
-  display: block; /* Remove espaço embaixo da imagem se for inline */
-  max-width: 100%; /* Garante que não ultrapasse a div */
+.botao-contato:hover {
+  background-color: #444;
 }
 
-.close-btn {
-  align-self: flex-end;
-  background: #333;
-  color: #fff;
-  border: none;
-  padding: 8px 12px;
-  border-radius: 6px;
-  cursor: pointer;
-  margin-top: 10px;
+.whatsapp {
+  background-color: #25d366;
 }
 
-.close-btn:hover {
-  background: #5e2ca5;
+.whatsapp:hover {
+  background-color: #1ebe5b;
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.email {
+  background-color: #0072c6;
 }
 
-/* Responsividade */
-@media (max-width: 900px) {
-  .project-details-wrapper {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .project-detail {
-    width: 90%;
-    max-width: 500px;
-  }
-}
-
-@media (max-width: 600px) {
-  .projects-tabs {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .project-tab {
-    width: 90%;
-    max-width: 300px;
-  }
-
-  .project-detail {
-    padding: 15px;
-  }
-
-  #projetos {
-    padding: 60px 15px;
-  }
+.email:hover {
+  background-color: #005999;
 }
 
 /* Tecnologias */
 #tec {
-  background-color:#fff;
-  display:flex; justify-content:center;
-  align-items:center; gap:20px; flex-wrap:wrap;
-  padding:100px 20px 20px;
-  
+  background-color: #fff;
+  padding: 60px 20px;
+  text-align: center;
 }
+
+#tec h2 {
+  font-size: 2.2rem;
+  margin-bottom: 40px;
+  color: #222;
+  font-weight: bold;
+}
+
+.grupo-tec {
+  margin-bottom: 40px;
+}
+
+.titulo-tec {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.linha-tec {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
 .tecs {
-  width:80px; height:80px; background:#e0e0e0;
-  border-radius:20px; display:flex;
-  align-items:center; justify-content:center;
-  animation:textEntry 2s ease-out forwards;
+  background: #f0f0f0;
+  border: 2px solid #ccc;
+  border-radius: 12px;
+  padding: 20px;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+.tecs:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+.tecs img {
+  max-width: 60px;
+  max-height: 60px;
+  object-fit: contain;
+}
+
+
+/* Animações */
+@keyframes waveMotion { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-10px)} }
+@keyframes fadeIn { to{opacity:1} }
+@keyframes textEntry { from{opacity:0;transform:translateX(100px)} to{opacity:1;transform:translateX(0)} }
+@keyframes imageEntry { from{opacity:0;transform:translateX(-100px)} to{opacity:1;transform:translateX(0)} }
+@keyframes slideInUp { from{opacity:0;transform:translateY(50px)} to{opacity:1;transform:translateY(0)} }
+@keyframes slideInDown { from{opacity:0;transform:translateY(-50px)} to{opacity:1;transform:translateY(0)} }
 
 /* Responsividade */
 @media(max-width:768px){
-  #page1{flex-direction:column;padding:100px 20px}
+  #page1{flex-direction:column}
   .foto{width:150px;height:150px}
-  #page1 h1{font-size:2rem}
-  nav a{font-size:0.9rem;padding:8px 15px}
-  .redes{gap:20px}
-  .projects-content{grid-template-columns:repeat(auto-fit,minmax(180px,1fr))}
+  .redes{flex-direction:row; justify-content:center; left:0; margin-top:20px}
 }
 @media(max-width:480px){
   nav a{font-size:0.8rem;padding:5px 10px}

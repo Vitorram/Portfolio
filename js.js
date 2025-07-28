@@ -12,6 +12,17 @@ const NEXT_WORD_DELAY = 500;
 const typingEl = document.querySelector('.typing');
 const cursorEl = document.querySelector('.cursor');
 
+
+  document.querySelectorAll('.project-tab').forEach(tab => {
+    const btn = tab.querySelector('.ver-mais');
+    btn.addEventListener('click', () => {
+      const ativo = tab.classList.toggle('expandido');
+      btn.textContent = ativo ? 'Ver Menos' : 'Ver Mais';
+    });
+  });
+
+
+
 function type() {
   
   if (charIdx < words[idx].length) {
