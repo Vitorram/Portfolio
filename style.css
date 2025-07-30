@@ -329,17 +329,16 @@ nav a:hover {
 }
 
 .project-tab {
-  width: 300px;
-  height: 430px;
+  width: 200px;
+  height: 400px;
   background: #fff;
   border: 2px solid #000000;
-
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  transition: transform 0.3s ease;
+ transition: all 0.4s ease;
 }
 
 .project-tab:hover {
@@ -410,7 +409,11 @@ nav a:hover {
 
 
 .project-tab.expandido {
-  height: 700px;         
+   width: 500px;
+  height: 700px;
+  opacity: 1;
+  transform: scale(1);
+  pointer-events: auto;
 }
 .project-tab.expandido .expandido-conteudo {
   opacity: 1;
@@ -527,14 +530,74 @@ nav a:hover {
 @keyframes slideInDown { from{opacity:0;transform:translateY(-50px)} to{opacity:1;transform:translateY(0)} }
 
 /* Responsividade */
-@media(max-width:768px){
-  #page1{flex-direction:column}
-  .foto{width:150px;height:150px}
-  .redes{flex-direction:row; justify-content:center; left:0; margin-top:20px}
+@media (max-width: 768px) {
+  /* Header alinhado corretamente */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #000;
+    color: white;
+    padding: 10px;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+  }
+
+  header nav {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+  }
+
+  header nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.85rem;
+    
+  }
+
+  /* Página inicial centralizada */
+  /* Estilo original (desktop) continua normal */
+
+@media (max-width: 768px) {
+ 
+  #projetos{
+    margin: 0 auto;
+  }
+  .expandido-conteudo{
+    
+  }
+  .projects-tabs::-webkit-scrollbar {
+    display: none;
+  }
+
+  .project-tab {
+    display: flex;
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+    width: 250px;
+    height: 150px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    color: white;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    
+  }
+
+  .project-tab img {
+    display: none;
+  }
+
+  .project-tab br {
+    display: none;
+  }
+
+  .ver-mais {
+    display: none;
+  }
 }
-@media(max-width:480px){
-  nav a{font-size:0.8rem;padding:5px 10px}
-  #page1 h1{font-size:1.5rem}
-  .box31{font-size:0.9rem}
-  .tecs{width:50px;height:50px}
 }
+
